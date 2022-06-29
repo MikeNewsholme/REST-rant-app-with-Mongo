@@ -1,7 +1,6 @@
 {
   "name": "rest-rant",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +9,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.0.1"
-  }
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeNewsholme/REST-rant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MikeNewsholme/REST-rant/issues"
+  },
+  "homepage": "https://github.com/MikeNewsholme/REST-rant#readme",
+  "description": ""
 }
