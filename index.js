@@ -8,12 +8,12 @@ app.engine('jsx', require('express-react-views').createEngine())
 app.use("/places", require("./controllers/places"));
 
 app.get("/", (req, res) => {
-  res.render('home')
+  res.render('places/home')
   //res.send("Hello world!");
 });
 
 app.get("*", (req, res) => {
-  res.render('error404')
+  res.render('places/error404')
   //res.status(404).send("<h1>404 Page</h1>");
 });
 
