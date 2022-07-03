@@ -9,6 +9,8 @@ function home(){
                 <a href='/places'>
                     <div>
                         <img src="/images/parrot.jpg" alt="Parrot"/>
+                        <div> <a href="AUTHOR_LINK">Mikhail Vasilyev</a> on <a href="https://unsplash.com/s/photos/free">Unsplash</a>
+                        </div>
                     </div>
                     <button className='btn-primary'>Places Page</button>
                 </a>
