@@ -6,6 +6,12 @@ function home(){
         <Def>
             <main>
                 <h1>HOME</h1>
+                <a href='/places'>
+                    <div>
+                        <img src="/images/parrot.jpg" alt="Parrot"/>
+                    </div>
+                    <button className='btn-primary'>Places Page</button>
+                </a>
             </main>
         </Def>
     )
