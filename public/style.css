@@ -3,3 +3,32 @@ h1{
     color:cornflowerblue;
 
 }
+nav {
+    background-color:grey;
+    padding:10px;
+}
+nav ul{
+    list-style-type:none;
+    margin:0;
+}
+nav li {
+    display:inline;
+    margin-right:25px;
+}
+nav a{
+    color:white;
+    font-size:1.5em;
+}
+nav a:hover{
+    color:darkslategrey;
+    text-decoration:wavy;
+}
+body{
+    background-color:rgba(240, 230, 140, 0.578);
+    text-align:center;
+}
+main {
+    margin-right:20px;
+    margin-left:20px;
+    background-color:blanchedalmond
+}
