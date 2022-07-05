@@ -1,4 +1,5 @@
 const router = require("express").Router();
+//const places = require("../controllers/places")
 
 router.get('/new', (req,res)=>{
   res.render('places/new')
