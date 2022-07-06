@@ -10,20 +10,6 @@ router.get("/", (req, res) => {
 router.get("/new", (req, res) => {
   res.render('places/new')
 });
-//show route
-router.get("/:id", (req, res) => {
-  let id = Number(req.params.id)
-  if(isNaN(id)){
-    res.render('error404')
-  } else if(!places[id]){
-    res.render('error404')
-  }
-  else {
-      res.render("places/show",{ place: places[id]});
-  }
-});
-
-
 
  router.post("/", (req, res) => {
    console.log(req.body);
@@ -37,9 +23,38 @@ router.get("/:id", (req, res) => {
    if (!req.body.state) {
      req.body.state = "USA";
    }
-   places.push(req.body)
+   places.push(req.body);
    res.redirect("/places");
  });
+
+
+//SHOW
+router.get("/:id", (req, res) => {
+  let id = Number(req.params.id);
+  if (isNaN(id)) {
+    res.render("error404");
+  } else if (!places[id]) {
+    res.render("error404");
+  } else {
+    res.render("places/show", { place: places[id], id });
+  }
+});
+
+//DELETE
+router.delete("/places/:id", (req, res) => {
+  let id = Number(req.params.id);
+  if (isNaN(id)) {
+    res.render("error404");
+  } else if (!places[id]) {
+    res.render("error404");
+  } else {
+    places.splice(id, 1);
+    res.redirect("/places");
+  }
+});
+
+
+
 
    
   
