@@ -8,28 +8,23 @@ const methodOverride = require("method-override");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
-app.set('views', __dirname + '/views')
-app.set('view engine','jsx')
-app.engine('jsx', require('express-react-views').createEngine())
-
-
+app.set("views", __dirname + "/views");
+app.set("view engine", "jsx");
+app.engine("jsx", require("express-react-views").createEngine());
 
 //import router
 app.use("/places", require("./controllers/places"));
 
 //homepage route
 app.get("/", (req, res) => {
-  res.render('home')
-  
+  res.render("home");
 });
 //404 page
 app.get("*", (req, res) => {
-  res.render('error404')
- 
+  res.render("error404");
 });
 
-
 //listening for connections
-app.listen(process.env.PORT, () =>{
-  console.log("HI!")
+app.listen(process.env.PORT, () => {
+  console.log("HI!");
 });
