@@ -1,5 +1,6 @@
 //modules and globals
 require("dotenv").config();
+const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
 const methodOverride = require("method-override");
@@ -11,6 +12,11 @@ app.use(methodOverride("_method"));
 app.set("views", __dirname + "/views");
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
+
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 //import router
 app.use("/places", require("./controllers/places"));
@@ -28,3 +34,8 @@ app.get("*", (req, res) => {
 app.listen(process.env.PORT, () => {
   console.log("HI!");
 });
+
+
+
+
+module.exports.Place = require("./models/places");

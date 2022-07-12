@@ -15,6 +15,7 @@
     "express-react-views": "^0.11.0",
     "i": "^0.3.7",
     "method-override": "^3.0.0",
+    "mongoose": "^6.4.4",
     "react": "^18.2.0"
   },
   "repository": {
