@@ -5,7 +5,8 @@ const Def = require('../default')
 function index(data){
     let placesFormatted = data.places.map((place)=>{
         return(
-            <div className='col-sm-6'>
+            
+            <div className='col-sm-6 col-md-4 col-lg-3'>
                 <h2>
                     <a href={`/places/${place.id}`}>
                         {place.name}
