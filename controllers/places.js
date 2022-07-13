@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const e = require("express");
 const db = require('../models')
 
 //INDEX ROUTE
@@ -14,15 +15,21 @@ router.get("/", (req, res) => {
 });
 //POST ROUTE
 router.post("/", (req, res) => {
+  if (!req.body.pic) {
+    // Default image if one is not provided
+    req.body.pic = "http://placekitten.com/400/400";
+  }
+
   db.Place.create(req.body)
-  .then(()=> {
-    res.redirect('/places')
-  })
-  .catch(err =>{
-    console.log('err', err)
-    res.render('error404')
-  })
+    .then(() => {
+      res.redirect("/places");
+    })
+    .catch((err) => {
+      console.log("err", err);
+      res.render("error404");
+    });
 });
+
 
 //NEW
 router.get("/new", (req, res) => {
