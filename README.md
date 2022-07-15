@@ -10,7 +10,7 @@ REST-Rant is an app where users can review restaurants.
 [x]Part 7: Implementing edit form and functionality, adding a PUT route
 [x]Part 8: Implementing the Mongoose ODM
 [x]Part 9: Seed data, validations, and helper methods
-[]Part 10: Adding commentary: rants and raves
+[x]Part 10: Adding commentary: rants and raves
 []Part 11: Populating data for star ratings
 []Part 12: Deploying your project
 

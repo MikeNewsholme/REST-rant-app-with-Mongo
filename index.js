@@ -32,7 +32,7 @@ app.get("*", (req, res) => {
 
 //listening for connections
 app.listen(process.env.PORT, () => {
-  console.log("HI!");
+  console.log("Nomming at port 3000!");
 });
 
 

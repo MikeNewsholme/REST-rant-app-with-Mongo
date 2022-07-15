@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const e = require("express");
+const express = require("express");
 const db = require('../models')
 
 //INDEX ROUTE
