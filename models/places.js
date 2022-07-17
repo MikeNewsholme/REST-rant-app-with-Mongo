@@ -19,3 +19,4 @@ placeSchema.methods.showEstablished= function() {
 }
 
  module.exports = mongoose.model('place', placeSchema)
+ 
